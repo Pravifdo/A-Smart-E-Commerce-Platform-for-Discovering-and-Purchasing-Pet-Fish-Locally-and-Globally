@@ -1,0 +1,80 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #1e90ff; /* Blue background for AquaTrade theme */
+  color: white;
+}
+
+.logo a {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  padding: 5px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+}
+
+.search-bar button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  background-color: white;
+  cursor: pointer;
+}
+
+.search-bar button img {
+  width: 16px;
+  height: 16px;
+}
+
+.sign-in {
+  margin-left: 15px;
+  color: white;
+  text-decoration: none;
+}
+
+.cart-icon {
+  margin-left: 15px;
+}
+
+.cart-icon img {
+  width: 24px;
+  height: 24px;
+}

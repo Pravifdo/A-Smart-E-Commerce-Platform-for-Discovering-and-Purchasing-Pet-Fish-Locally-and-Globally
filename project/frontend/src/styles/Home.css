@@ -1,80 +1,36 @@
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #1e90ff; /* Blue background for AquaTrade theme */
-  color: white;
-}
-
-.logo a {
-  font-size: 1.5em;
-  font-weight: bold;
-  color: white;
-  text-decoration: none;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-links li {
-  margin: 0 15px;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-size: 1em;
-}
-
-.nav-links a:hover {
-  text-decoration: underline;
-}
-
-.nav-actions {
+/* Hero Section */
+.hero-section {
+  position: relative;
+  width: calc(100% - 60px); /* left+right 20px gap */
+  height: 80vh;
+  background-image: url('../pages/Home-image.jpg'); 
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
+  justify-content: center;
+  margin: 40px 30px 0 30px;  /* 👈 top=40, right=20, bottom=0, left=20 */
+  border-radius: 30px;
+  overflow: hidden;
 }
 
-.search-bar {
-  display: flex;
-  align-items: center;
+.hero-overlay{
+    background: rgba(0, 0, 0, 0.5);
+    padding: 30px 40px;
+    border-radius: 12px;
+    text-align: center;
+    color: #fff;
+    max-width: 700px;
 }
 
-.search-bar input {
-  padding: 5px;
-  border: none;
-  border-radius: 4px 0 0 4px;
+.hero-overlay h3 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: bold;
 }
 
-.search-bar button {
-  padding: 5px 10px;
-  border: none;
-  border-radius: 0 4px 4px 0;
-  background-color: white;
-  cursor: pointer;
-}
-
-.search-bar button img {
-  width: 16px;
-  height: 16px;
-}
-
-.sign-in {
-  margin-left: 15px;
-  color: white;
-  text-decoration: none;
-}
-
-.cart-icon {
-  margin-left: 15px;
-}
-
-.cart-icon img {
-  width: 24px;
-  height: 24px;
+.hero-overlay p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
 }

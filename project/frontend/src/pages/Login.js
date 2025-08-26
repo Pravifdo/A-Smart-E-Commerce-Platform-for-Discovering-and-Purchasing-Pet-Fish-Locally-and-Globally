@@ -22,7 +22,7 @@ const Login = () => {
 
       const data = await response.json();
       if (response.ok) {
-        navigate('/'); // Redirect to Home on success
+        navigate('/mainPage'); // Redirect to Main Page on success
       } else {
         setError(data.message || 'Login failed');
         navigate('/reject'); // Redirect to Reject page on failure

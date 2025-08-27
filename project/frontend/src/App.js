@@ -6,6 +6,7 @@ import Items from "./pages/Items";
 import Shop from "./pages/Shop";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
+import MainPage from "./pages/main-page/mainPage";
 
 
 function App() {
@@ -21,6 +22,8 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/orders" element={<Orders />} />
+
+          <Route path="/mainPage" element={<MainPage />} />
 
         </Routes>
       </div>

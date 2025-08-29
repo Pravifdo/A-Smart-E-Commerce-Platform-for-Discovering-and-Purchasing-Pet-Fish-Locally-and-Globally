@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Navbar from '../../components/Navbar';
+import NavbarHome from '../../components/NavbarHome';
 import '../../styles/mainPage.css';
 
 // Import videos
@@ -12,7 +12,7 @@ import bmpVideo from './videos/bmp.mp4';
 const Main = () => {
   return (
     <div className="main-page">
-      <Navbar />
+      <NavbarHome />
       <div className="content">
         <h2>Welcome to AquaTrade</h2>
         <div className="box-container">

@@ -8,7 +8,7 @@ const NavbarHome = () => {
 
   // ✅ Always go to ProfileForm if logged in, otherwise go Login
   const handleProfileClick = () => {
-   navigate("/ProfilePage")
+   navigate("/Profile")
   };
 
   return (

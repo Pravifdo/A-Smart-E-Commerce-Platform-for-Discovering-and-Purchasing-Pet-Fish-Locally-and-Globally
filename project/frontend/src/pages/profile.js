@@ -1,12 +1,13 @@
 import React from "react";
 import ProfileForm from "../components/profileFrom";
 
-const ProfilePage = () => {
+const profile = () => {
   return (
     <div>
+    
         <ProfileForm />
     </div>
   );
 };
 
-export default ProfilePage;
+export default profile;

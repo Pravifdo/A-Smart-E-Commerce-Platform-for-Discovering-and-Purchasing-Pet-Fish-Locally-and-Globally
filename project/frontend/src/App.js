@@ -7,7 +7,9 @@ import Shop from "./pages/Shop";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import MainPage from "./pages/main-page/mainPage";
-import profile from "./pages/profile";
+import Profile from "./pages/profile";
+
+
 
 
 function App() {
@@ -25,7 +27,7 @@ function App() {
           <Route path="/orders" element={<Orders />} />
 
           <Route path="/mainPage" element={<MainPage />} />
-          <Route path="/profile" element={<profile />} />
+          <Route path="/profile" element={<Profile />} />
 
         </Routes>
       </div>

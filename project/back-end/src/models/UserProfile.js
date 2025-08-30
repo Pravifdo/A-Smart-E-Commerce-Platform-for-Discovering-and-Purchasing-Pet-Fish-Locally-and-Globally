@@ -1,6 +1,12 @@
 const mongoose = require('mongoose');
 
 const userProfileSchema = new mongoose.Schema({
+
+    userId:{
+        type :String,
+        required:true,
+        unique:true
+    },
     name :{
         type:String,
         required:true
@@ -17,10 +23,6 @@ const userProfileSchema = new mongoose.Schema({
         type:String,
         default:""
     },
-    createdAt: {
-    type: Date,
-    default: Date.now
-  }
 });
 
 module.exports = mongoose.model('UserProfile', userProfileSchema);

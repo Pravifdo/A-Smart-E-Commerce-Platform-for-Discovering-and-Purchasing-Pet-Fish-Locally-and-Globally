@@ -3,12 +3,23 @@ import { Link, useNavigate } from "react-router-dom";
 import "../styles/NavbarHome.css";
 
 const NavbarHome = () => {
-  const user = JSON.parse(localStorage.getItem("user")); // ✅ Get user from localStorage
+  // ✅ Safely parse user data from localStorage
+  const getUserData = () => {
+    try {
+      const userData = localStorage.getItem("user");
+      return userData ? JSON.parse(userData) : null;
+    } catch (error) {
+      console.error("Error parsing user data:", error);
+      return null;
+    }
+  };
+
+  const user = getUserData();
   const navigate = useNavigate();
 
   // ✅ Always go to ProfileForm if logged in, otherwise go Login
   const handleProfileClick = () => {
-   navigate("/Profile")
+   navigate("/profile")
   };
 
   return (

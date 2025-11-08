@@ -8,7 +8,8 @@ const shopSchema = new mongoose.Schema({
   },
   description: {
     type: String,
-    required: true
+    required: false,
+    default: ''
   },
   owner: {
     type: String,
@@ -21,16 +22,20 @@ const shopSchema = new mongoose.Schema({
     lowercase: true,
     trim: true
   },
+  password: {
+    type: String,
+    required: true
+  },
   phone: {
     type: String,
     required: true
   },
   address: {
-    street: { type: String, required: true },
-    city: { type: String, required: true },
-    state: { type: String, required: true },
-    zipCode: { type: String, required: true },
-    country: { type: String, required: true, default: 'USA' }
+    street: { type: String, required: false, default: '' },
+    city: { type: String, required: false, default: '' },
+    state: { type: String, required: false, default: '' },
+    zipCode: { type: String, required: false, default: '' },
+    country: { type: String, required: false, default: 'USA' }
   },
   location: {
     type: {

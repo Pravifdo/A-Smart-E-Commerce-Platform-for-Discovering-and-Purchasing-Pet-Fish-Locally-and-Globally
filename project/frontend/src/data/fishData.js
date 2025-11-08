@@ -150,5 +150,138 @@ export const fishData = [
       temperature: "59-77°F",
       hardness: "Medium"
     }
+  },
+  {
+    id: 9,
+    name: "Oscar Fish",
+    species: "Astronotus ocellatus",
+    category: "Freshwater",
+    price: 24.99,
+    description: "Intelligent and interactive cichlid with bold personality.",
+    size: "10-12 inches",
+    temperament: "Aggressive",
+    careLevel: "Moderate",
+    imageUrl: "https://images.unsplash.com/photo-1591608971362-f08b2a75731a?w=400&h=300&fit=crop",
+    stock: 12,
+    isAvailable: true,
+    waterParameters: {
+      pH: "6.0-8.0",
+      temperature: "74-81°F",
+      hardness: "Soft to medium"
+    }
+  },
+  {
+    id: 10,
+    name: "Discus",
+    species: "Symphysodon spp.",
+    category: "Tropical",
+    price: 89.99,
+    description: "King of the aquarium! Beautiful disc-shaped cichlid.",
+    size: "6-8 inches",
+    temperament: "Peaceful",
+    careLevel: "Difficult",
+    imageUrl: "https://images.unsplash.com/photo-1535591273668-578e31182c4f?w=400&h=300&fit=crop",
+    stock: 8,
+    isAvailable: true,
+    waterParameters: {
+      pH: "6.0-7.0",
+      temperature: "82-86°F",
+      hardness: "Very soft"
+    }
+  },
+  {
+    id: 11,
+    name: "Pleco",
+    species: "Hypostomus plecostomus",
+    category: "Freshwater",
+    price: 12.99,
+    description: "Algae-eating catfish that helps keep your tank clean.",
+    size: "12-24 inches",
+    temperament: "Peaceful",
+    careLevel: "Easy",
+    imageUrl: "https://images.unsplash.com/photo-1520990692805-f5cd36e61426?w=400&h=300&fit=crop",
+    stock: 18,
+    isAvailable: true,
+    waterParameters: {
+      pH: "6.5-7.5",
+      temperature: "72-82°F",
+      hardness: "Soft to medium"
+    }
+  },
+  {
+    id: 12,
+    name: "Zebra Danio",
+    species: "Danio rerio",
+    category: "Freshwater",
+    price: 2.99,
+    description: "Hardy, active schooling fish with horizontal stripes.",
+    size: "1.5-2 inches",
+    temperament: "Peaceful",
+    careLevel: "Easy",
+    imageUrl: "https://images.unsplash.com/photo-1524704796725-9fc3436cbfa3?w=400&h=300&fit=crop",
+    stock: 60,
+    isAvailable: true,
+    waterParameters: {
+      pH: "6.5-7.5",
+      temperature: "64-75°F",
+      hardness: "Soft to medium"
+    }
+  },
+  {
+    id: 13,
+    name: "Molly Fish",
+    species: "Poecilia sphenops",
+    category: "Tropical",
+    price: 5.99,
+    description: "Peaceful livebearer available in many colors.",
+    size: "3-4 inches",
+    temperament: "Peaceful",
+    careLevel: "Easy",
+    imageUrl: "https://images.unsplash.com/photo-1522720833375-7b52a7a3c0b1?w=400&h=300&fit=crop",
+    stock: 35,
+    isAvailable: true,
+    waterParameters: {
+      pH: "7.5-8.5",
+      temperature: "72-78°F",
+      hardness: "Medium to hard"
+    }
+  },
+  {
+    id: 14,
+    name: "Swordtail",
+    species: "Xiphophorus hellerii",
+    category: "Tropical",
+    price: 6.99,
+    description: "Named for the male's distinctive sword-like tail extension.",
+    size: "4-5 inches",
+    temperament: "Peaceful",
+    careLevel: "Easy",
+    imageUrl: "https://images.unsplash.com/photo-1583212292454-1fe6229603b7?w=400&h=300&fit=crop",
+    stock: 28,
+    isAvailable: true,
+    waterParameters: {
+      pH: "7.0-8.3",
+      temperature: "72-79°F",
+      hardness: "Medium to hard"
+    }
+  },
+  {
+    id: 15,
+    name: "Rainbowfish",
+    species: "Melanotaenia spp.",
+    category: "Freshwater",
+    price: 14.99,
+    description: "Vibrant, active schooling fish with stunning iridescent colors.",
+    size: "3-6 inches",
+    temperament: "Peaceful",
+    careLevel: "Easy",
+    imageUrl: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&h=300&fit=crop",
+    stock: 22,
+    isAvailable: true,
+    waterParameters: {
+      pH: "6.5-8.0",
+      temperature: "72-77°F",
+      hardness: "Medium"
+    }
   }
 ];

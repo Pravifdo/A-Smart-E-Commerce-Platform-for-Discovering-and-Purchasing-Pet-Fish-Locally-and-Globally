@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import NavbarHome from '../components/NavbarHome';
 import FishCard from '../components/FishCard';
 import SearchBar from '../components/SearchBar';
-import { fishData } from '../data/fishData';
 import '../styles/ExploreFish.css';
 
 const ExploreFish = () => {
@@ -10,11 +9,30 @@ const ExploreFish = () => {
   const [filteredFishes, setFilteredFishes] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState('');
 
   useEffect(() => {
-    // Load fish data
-    setFishes(fishData);
-    setFilteredFishes(fishData);
+    // Fetch fish data from MongoDB
+    const fetchFishes = async () => {
+      try {
+        const response = await fetch('http://localhost:3000/api/fish');
+        if (response.ok) {
+          const data = await response.json();
+          setFishes(data);
+          setFilteredFishes(data);
+        } else {
+          setError('Failed to fetch fish data');
+        }
+      } catch (err) {
+        setError('Server error. Please try again later.');
+        console.error('Error fetching fish:', err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchFishes();
   }, []);
 
   useEffect(() => {
@@ -65,15 +83,21 @@ const ExploreFish = () => {
           </div>
         </div>
 
-        <div className="fish-grid">
-          {filteredFishes.length > 0 ? (
-            filteredFishes.map(fish => (
-              <FishCard key={fish.id} fish={fish} />
-            ))
-          ) : (
-            <p className="no-results">No fish found matching your criteria.</p>
-          )}
-        </div>
+        {loading ? (
+          <p className="no-results">Loading fish...</p>
+        ) : error ? (
+          <p className="no-results">{error}</p>
+        ) : (
+          <div className="fish-grid">
+            {filteredFishes.length > 0 ? (
+              filteredFishes.map(fish => (
+                <FishCard key={fish._id || fish.id} fish={fish} />
+              ))
+            ) : (
+              <p className="no-results">No fish found matching your criteria.</p>
+            )}
+          </div>
+        )}
       </div>
     </div>
   );

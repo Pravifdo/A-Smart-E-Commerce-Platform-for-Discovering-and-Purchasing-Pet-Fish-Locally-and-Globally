@@ -1,0 +1,152 @@
+/* මුළු පිටුවට අයත් background සහ height සකසන්න */
+.explore-fish-page {
+  min-height: 100vh; /* Viewport උසට සමානයි */
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Gradient පසුබිම */
+}
+
+/* කොන්ටේනරයේ පළල සහ padding සකසන්න */
+.explore-container {
+  max-width: 1400px; /* පළලේ ඉම */
+  margin: 0 auto; /* මැදට සකස් කිරීම */
+  padding: 80px 20px 40px; /* ඉහළ, ආසන්න, සහ පහළ padding */
+}
+
+/* මුල් මාතෘකාවට අයත් styling */
+.explore-container h1 {
+  text-align: center; /* මැදට align කරන්න */
+  color: white; /* අකුරු වර්ණය */
+  font-size: 3rem; /* අකුරු ප්‍රමාණය */
+  margin-bottom: 10px; /* පහළ margin */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* අකුරට ලියුම් ගැලපීමක් */
+}
+
+/* උප මාතෘකාවේ style */
+.subtitle {
+  text-align: center; /* මැදට align කරන්න */
+  color: rgba(255, 255, 255, 0.9); /* මෘදු ස්වච්ඡ වර්ණයක් */
+  font-size: 1.2rem; /* අකුරු ප්‍රමාණය */
+  margin-bottom: 30px; /* පහළ margin */
+}
+
+/* තේරීම් කොටස සඳහා අයත් box style */
+.filter-section {
+  background: white; /* පසුබිම් වර්ණය */
+  padding: 20px; /* අභ්‍යන්තර පුරවීම */
+  border-radius: 12px; /* කෙලින් නැති අයුරු */
+  margin: 20px 0 30px; /* ඉහළ/පහළ margin */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* මෘදු shadow එකක් */
+}
+
+/* Label එකට style එක */
+.filter-section label {
+  font-size: 1.1rem; /* අකුරු ප්‍රමාණය */
+  font-weight: 600; /* boldness */
+  color: #2c3e50; /* අකුරු වර්ණය */
+  margin-right: 15px; /* දකුණු margin */
+}
+
+/* Categories බොත්තම් එකකට තිබෙන box එක */
+.category-buttons {
+  display: flex; /* බොත්තම් row එකක් ලෙස */
+  gap: 10px; /* අතර space */
+  flex-wrap: wrap; /* සෙට් එක ඉක්මවූ විට wrap කරන්න */
+  margin-top: 10px; /* ඉහළ margin */
+}
+
+/* Category button වල පසුබිම්, වර්ණ, සහ hover effects */
+.category-buttons button {
+  padding: 10px 20px; /* Button අභ්‍යන්තර padding */
+  border: 2px solid #667eea; /* Button border එක */
+  background: white; /* Default පසුබිම */
+  color: #667eea; /* අකුරු වර්ණය */
+  border-radius: 25px; /* වටකුරු කෙලින් */
+  font-weight: 600; /* අකුරු bold */
+  cursor: pointer; /* Cursor එකත් pointer කරන්න */
+  transition: all 0.3s ease; /* මෘදු transition */
+}
+
+.category-buttons button:hover {
+  background: #667eea; /* Hover වෙද්දි background වෙනස් */
+  color: white; /* Hover වෙද්දි අකුරු වර්ණය */
+  transform: translateY(-2px); /* Hover වෙද්දි ටිකක් උස්මානය */
+}
+
+/* Category button එක active වෙද්දි style එක */
+.category-buttons button.active {
+  background: #667eea;
+  color: white;
+  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3); /* Shadow */
+}
+
+/* Fish Card වල Grid system එක - row එකක් 5 cards නම් */
+.fish-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 columns */
+  gap: 20px; /* card අතර space */
+  margin-top: 30px; /* ඉහළ margin */
+}
+
+/* තේරීම් ප්‍රතිඵල නැති විට පෙන්වන text */
+.no-results {
+  text-align: center; /* මැද දක්වන්න */
+  color: white; /* අකුරු වර්ණය */
+  font-size: 1.2rem; /* අකුරු ප්‍රමාණය */
+  padding: 40px; /* Padding */
+  grid-column: 1 / -1; /* Grid එකේ හැම column එකම සපුරන්න */
+}
+
+/* --- Responsive Design හදන විදිහ --- */
+
+/* Large screen devices සඳහා  */
+@media (max-width: 1400px) {
+  .fish-grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  }
+}
+
+/* Medium screen සඳහා  */
+@media (max-width: 1024px) {
+  .fish-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  }
+
+  .explore-container h1 {
+    font-size: 2.5rem; /* Title font හකුළයි */
+  }
+}
+
+/* Tablet screen සඳහා  */
+@media (max-width: 768px) {
+  .fish-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 15px;
+  }
+
+  .explore-container {
+    padding: 70px 15px 30px; /* Container padding වැඩි/සෙට් කරන්න */
+  }
+
+  .explore-container h1 {
+    font-size: 2rem; /* Smaller title */
+  }
+
+  .subtitle {
+    font-size: 1rem; /* Smaller subtitle */
+  }
+
+  .category-buttons {
+    justify-content: center; /* Category buttons පේලිය මැදට */
+  }
+}
+
+/* Mobile screen සඳහා  */
+@media (max-width: 480px) {
+  .fish-grid {
+    grid-template-columns: 1fr; /* 1 column */
+  }
+
+  .category-buttons button {
+    flex: 1; /* Button width වැඩි */
+    min-width: 120px; /* අවම width */
+  }
+}

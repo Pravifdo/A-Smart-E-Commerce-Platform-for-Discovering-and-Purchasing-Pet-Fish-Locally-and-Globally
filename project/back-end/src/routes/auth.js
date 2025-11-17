@@ -5,6 +5,7 @@ const bcrypt = require("bcrypt");
 
 router.post("/login", async (req, res) => {
   const { email, password } = req.body;
+  console.log("logging in backend");
 
   try {
     const user = await User.findOne({ email });

@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Orders from "./pages/Orders";
 import Items from "./pages/Items";
-import Shop from "./pages/ExploreShops/ShopCard";
+import Shop from "./pages/Shop";
+import ExploreShops from "./pages/ExploreShops";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import MainPage from "./pages/main-page/mainPage";
@@ -26,7 +27,7 @@ function App() {
           <Route path="/mainPage" element={<MainPage />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/explore-fish" element={<ExploreFish />} />
-          <Route path="/explore-shops" element={<Shop />} />
+          <Route path="/explore-shops" element={<ExploreShops />} />
           <Route path="/learn" element={<About />} />
           <Route path="/best-management" element={<BestManagement />} />
         </Routes>

@@ -212,6 +212,63 @@
   color: #5568d3;
 }
 
+/* Image Upload Styles */
+.file-input {
+  padding: 12px;
+  border: 2px dashed #667eea;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #f8f9fa;
+  transition: all 0.3s ease;
+}
+
+.file-input:hover {
+  border-color: #5568d3;
+  background: #e9ecef;
+}
+
+.help-text {
+  font-size: 0.85rem;
+  color: #6c757d;
+  margin-top: 8px;
+  font-style: italic;
+}
+
+.image-preview {
+  margin-top: 20px;
+  border: 2px solid #dee2e6;
+  border-radius: 12px;
+  padding: 15px;
+  background: #f8f9fa;
+  text-align: center;
+}
+
+.image-preview img {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+
+.remove-image-btn {
+  padding: 10px 20px;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.remove-image-btn:hover {
+  background: #c82333;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .shop-container {
@@ -260,4 +317,53 @@
   .subtitle {
     font-size: 1rem;
   }
+}
+
+/* Back Button */
+.back-btn {
+  padding: 12px 24px;
+  background: #95a5a6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.back-btn:hover {
+  background: #7f8c8d;
+  transform: translateX(-3px);
+}
+
+/* Form Title */
+.form-title {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Shop Home */
+.shop-home {
+  width: 100%;
+}
+
+.shop-home .welcome-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.shop-home .welcome-header h1 {
+  color: #2c3e50;
+  font-size: 2rem;
+  margin: 0;
+  text-align: left;
+  text-shadow: none;
 }

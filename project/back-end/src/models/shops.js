@@ -6,14 +6,10 @@ const shopSchema = new mongoose.Schema({
     required: true,
     trim: true
   },
-  description: {
-    type: String,
-    required: false,
-    default: ''
-  },
   owner: {
     type: String,
-    required: true
+    required: true,
+    trim: true
   },
   email: {
     type: String,
@@ -22,61 +18,31 @@ const shopSchema = new mongoose.Schema({
     lowercase: true,
     trim: true
   },
+  phone: {
+    type: String,
+    required: true,
+    trim: true
+  },
+  address: {
+    type: String,
+    required: true,
+    trim: true
+  },
   password: {
     type: String,
     required: true
   },
-  phone: {
+  description: {
     type: String,
-    required: true
+    default: ''
   },
-  address: {
-    street: { type: String, required: false, default: '' },
-    city: { type: String, required: false, default: '' },
-    state: { type: String, required: false, default: '' },
-    zipCode: { type: String, required: false, default: '' },
-    country: { type: String, required: false, default: 'USA' }
-  },
-  location: {
-    type: {
-      type: String,
-      enum: ['Point'],
-      default: 'Point'
-    },
-    coordinates: {
-      type: [Number],
-      default: [0, 0]
-    }
-  },
-  rating: {
-    type: Number,
-    min: 0,
-    max: 5,
-    default: 0
-  },
-  reviews: {
-    type: Number,
-    default: 0
+  category: {
+    type: String,
+    default: 'General'
   },
   imageUrl: {
     type: String,
-    default: '/images/shop-default.jpg'
-  },
-  specialties: [{
-    type: String
-  }],
-  openingHours: {
-    monday: { type: String, default: '9:00 AM - 6:00 PM' },
-    tuesday: { type: String, default: '9:00 AM - 6:00 PM' },
-    wednesday: { type: String, default: '9:00 AM - 6:00 PM' },
-    thursday: { type: String, default: '9:00 AM - 6:00 PM' },
-    friday: { type: String, default: '9:00 AM - 6:00 PM' },
-    saturday: { type: String, default: '10:00 AM - 4:00 PM' },
-    sunday: { type: String, default: 'Closed' }
-  },
-  isActive: {
-    type: Boolean,
-    default: true
+    default: '' // Base64 image or empty
   },
   createdAt: {
     type: Date,
@@ -88,13 +54,21 @@ const shopSchema = new mongoose.Schema({
   }
 });
 
-// Create index for geospatial queries
-shopSchema.index({ location: '2dsphere' });
-
-// Update the updatedAt timestamp before saving
+// Automatically update updatedAt timestamp before saving
 shopSchema.pre('save', function(next) {
   this.updatedAt = Date.now();
   next();
 });
+
+// Optional: virtual to get all fish in this shop
+shopSchema.virtual('fish', {
+  ref: 'Fish',
+  localField: '_id',
+  foreignField: 'shopId',
+});
+
+// Ensure virtuals are included when converting to JSON
+shopSchema.set('toJSON', { virtuals: true });
+shopSchema.set('toObject', { virtuals: true });
 
 module.exports = mongoose.model('Shop', shopSchema);

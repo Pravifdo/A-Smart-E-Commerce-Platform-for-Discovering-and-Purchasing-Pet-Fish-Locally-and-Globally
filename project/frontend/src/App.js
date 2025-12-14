@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Orders from "./pages/Orders";
-import Items from "./pages/Items";
 import Shop from "./pages/Shop";
 import ExploreShops from "./pages/ExploreShops";
 import Register from "./pages/Register";
@@ -10,8 +9,8 @@ import Login from "./pages/Login";
 import MainPage from "./pages/main-page/mainPage";
 import Profile from "./pages/profile";
 import ExploreFish from "./pages/ExploreFish";
-import BestManagement from "./pages/BestManagement";
-import About from "./pages/About";
+import Items from "./pages/items/items";
+
 
 function App() {
   return (
@@ -20,7 +19,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop />} />
-          <Route path="/items" element={<Items />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/orders" element={<Orders />} />
@@ -28,8 +26,8 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/explore-fish" element={<ExploreFish />} />
           <Route path="/explore-shops" element={<ExploreShops />} />
-          <Route path="/learn" element={<About />} />
-          <Route path="/best-management" element={<BestManagement />} />
+          <Route path="/items" element={<Items />} />
+          
         </Routes>
       </div>
    </Router>

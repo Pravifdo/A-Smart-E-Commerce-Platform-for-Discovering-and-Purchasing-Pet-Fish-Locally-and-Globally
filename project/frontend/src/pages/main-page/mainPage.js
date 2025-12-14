@@ -32,12 +32,12 @@ const Main = () => {
             <h3>Explore Shops</h3>
           </Link>
 
-          <Link to="/learn" className="box">
+          <Link to="/items" className="box">
             <video className="box-video" muted loop autoPlay>
               <source src={learnVideo} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-            <h3>Learn</h3>
+            <h3>Items</h3>
           </Link>
 
           <Link to="/best-management" className="box">
